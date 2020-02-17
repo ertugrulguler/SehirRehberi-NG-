@@ -14,4 +14,11 @@ export class CityService {
   getCities(): Observable<City[]> {
     return this.http.get<City[]>(this.apiEndPoint + "cities");
   }
+
+  getCityById(cityId): Observable<City> {
+    return this.http.get<City>(this.apiEndPoint + "cities/?id=" + cityId);
+  }
+  getPhotosByCity(cityId): Observable<Photo[]> {
+    return this.http.get<Photo[]>(this.apiEndPoint + "cities/cityId/photos");
+  }
 }
