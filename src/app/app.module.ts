@@ -6,11 +6,23 @@ import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./app.component";
 import { ValuesComponent } from "./values/values.component";
 import { NavComponent } from "./nav/nav.component";
+import { CityComponent } from './city/city.component';
 
 @NgModule({
-  declarations: [AppComponent, ValuesComponent, NavComponent],
-  imports: [BrowserModule, AppRoutingModule, HttpClientModule],
-  providers: [],
-  bootstrap: [AppComponent]
+   declarations: [
+      AppComponent,
+      ValuesComponent,
+      NavComponent,
+      CityComponent
+   ],
+   imports: [
+      BrowserModule,
+      AppRoutingModule,
+      HttpClientModule
+   ],
+   providers: [],
+   bootstrap: [
+      AppComponent
+   ]
 })
 export class AppModule {}
