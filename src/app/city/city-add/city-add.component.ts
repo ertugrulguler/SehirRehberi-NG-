@@ -7,6 +7,7 @@ import {
   FormBuilder
 } from "@angular/forms";
 import { City } from "src/app/models/city";
+import { AlertifyService } from "src/app/services/alertify.service";
 
 @Component({
   selector: "app-city-add",
@@ -17,7 +18,8 @@ import { City } from "src/app/models/city";
 export class CityAddComponent implements OnInit {
   constructor(
     private cityService: CityService,
-    private formBuilder: FormBuilder
+    private formBuilder: FormBuilder,
+    private alertifyService: AlertifyService
   ) {}
   city: City;
   cityAddForm: FormGroup;
@@ -38,6 +40,7 @@ export class CityAddComponent implements OnInit {
       // Todo
       this.city.userId = 1;
       this.cityService.add(this.city);
+      this.alertifyService.success("Şehir başarıyla eklendi.");
     }
   }
 }

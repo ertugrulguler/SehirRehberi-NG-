@@ -4,6 +4,7 @@ import { HttpClientModule } from "@angular/common/http";
 import { RouterModule } from "@angular/router";
 import { appRoutes } from "./routes";
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
+import { AlertifyService } from "./services/alertify.service";
 
 import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./app.component";
@@ -32,7 +33,7 @@ import { CityAddComponent } from "./city/city-add/city-add.component";
     ReactiveFormsModule
     // NgxGalleryModule
   ],
-  providers: [],
+  providers: [AlertifyService],
   bootstrap: [AppComponent]
 })
 export class AppModule {}
