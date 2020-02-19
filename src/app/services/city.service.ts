@@ -24,4 +24,8 @@ export class CityService {
   getPhotosByCity(cityId): Observable<Photo[]> {
     return this.http.get<Photo[]>(this.apiEndPoint + "cities/cityId/photos");
   }
+
+  add(city) {
+    this.http.post(this.apiEndPoint + "cities/create", city).subscribe();
+  }
 }

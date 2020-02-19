@@ -10,7 +10,7 @@ import { ValuesComponent } from "./values/values.component";
 import { NavComponent } from "./nav/nav.component";
 import { CityComponent } from "./city/city.component";
 import { CityDetailComponent } from "./city/city-detail/city-detail.component";
-import { NgxGalleryModule } from "ngx-gallery";
+// import { NgxGalleryModule } from "ngx-gallery";
 
 @NgModule({
   declarations: [
@@ -24,8 +24,8 @@ import { NgxGalleryModule } from "ngx-gallery";
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    RouterModule.forRoot(appRoutes),
-    NgxGalleryModule
+    RouterModule.forRoot(appRoutes)
+    // NgxGalleryModule
   ],
   providers: [],
   bootstrap: [AppComponent]
